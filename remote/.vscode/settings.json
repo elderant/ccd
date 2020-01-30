@@ -1,0 +1,38 @@
+{
+  "editor.tabSize": 2,
+  "deploy.reloaded": {
+      "packages": [
+          {
+              "name": "ccd Webpage",
+              "description": "The website",
+
+              "files": [
+                  "**/*.php",
+                  "**/*.css",
+                  "**/*.js",
+                  "**/*.log"
+              ],
+              "exclude": [
+                  //"**/!(wp-config).php",
+                  //"**/!(debug).log",
+              ],
+
+              "deployOnSave": [ "ccdWebpage" ],
+              "syncWhenOpen": "ccdWebpage",
+          }
+      ],
+
+      "targets": [
+          {
+              "type": "ftp",
+              "name": "ccdWebpage",
+              "description": "Wp-folder",
+              "host": "ftp.creativacoffeedistrict.com", 
+              "port": 21,
+              "user": "luxxo@creativacoffeedistrict.com", 
+              "password": "Morimosenjesus84/",
+              "dir": "/public_html/"
+          }
+      ]
+  }
+}
